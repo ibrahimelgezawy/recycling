@@ -35,7 +35,7 @@ public class HomeScreen extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         btnSignOut = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnSubmit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,9 +63,14 @@ public class HomeScreen extends javax.swing.JFrame {
         jButton4.setForeground(new java.awt.Color(240, 240, 240));
         jButton4.setText("History Of Interaction");
 
-        jButton5.setBackground(new java.awt.Color(255, 51, 51));
-        jButton5.setForeground(new java.awt.Color(240, 240, 240));
-        jButton5.setText("Submit Complaint");
+        btnSubmit.setBackground(new java.awt.Color(255, 51, 51));
+        btnSubmit.setForeground(new java.awt.Color(240, 240, 240));
+        btnSubmit.setText("Submit Complaint");
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -77,7 +82,7 @@ public class HomeScreen extends javax.swing.JFrame {
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSaleGarbage, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(456, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -94,7 +99,7 @@ public class HomeScreen extends javax.swing.JFrame {
                 .addGap(64, 64, 64)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(76, 76, 76)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addComponent(btnSignOut)
                 .addGap(31, 31, 31))
@@ -120,8 +125,14 @@ public class HomeScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSignOutActionPerformed
 
     private void btnSaleGarbageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaleGarbageActionPerformed
-        
+        dispose();
+        new SaleGarbageScreen();
     }//GEN-LAST:event_btnSaleGarbageActionPerformed
+
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+        dispose();
+        new ComplaintScreen();
+    }//GEN-LAST:event_btnSubmitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,9 +172,9 @@ public class HomeScreen extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSaleGarbage;
     private javax.swing.JButton btnSignOut;
+    private javax.swing.JButton btnSubmit;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

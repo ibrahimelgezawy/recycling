@@ -44,7 +44,7 @@
                       <Component id="jButton2" min="-2" pref="194" max="-2" attributes="0"/>
                       <Component id="btnSaleGarbage" min="-2" pref="194" max="-2" attributes="0"/>
                       <Component id="jButton4" min="-2" pref="194" max="-2" attributes="0"/>
-                      <Component id="jButton5" min="-2" pref="194" max="-2" attributes="0"/>
+                      <Component id="btnSubmit" min="-2" pref="194" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="456" max="32767" attributes="0"/>
               </Group>
@@ -65,7 +65,7 @@
                   <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                   <Component id="jButton4" min="-2" pref="55" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                  <Component id="jButton5" min="-2" pref="55" max="-2" attributes="0"/>
+                  <Component id="btnSubmit" min="-2" pref="55" max="-2" attributes="0"/>
                   <EmptySpace pref="39" max="32767" attributes="0"/>
                   <Component id="btnSignOut" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
@@ -118,7 +118,7 @@
             <Property name="text" type="java.lang.String" value="History Of Interaction"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton5">
+        <Component class="javax.swing.JButton" name="btnSubmit">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="33" red="ff" type="rgb"/>
@@ -128,6 +128,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Submit Complaint"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSubmitActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

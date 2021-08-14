@@ -16,7 +16,7 @@ import Screens.SaleGarbageScreen;
  */
 public class Recycling {
     public static void main(String[] args) {
-        new SaleGarbageScreen();
+        new LoginScreen();
     }
     
 }
