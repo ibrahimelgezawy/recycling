@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author Ibrahim Mohamed
  */
-public class Data {
+public abstract class Data {
      private static ArrayList<User> users=new ArrayList<>();
      public static void addUser(String username,String password){
          users.add(new User(username,password));

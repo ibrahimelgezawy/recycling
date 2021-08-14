@@ -6,6 +6,9 @@
 package Screens;
 
 import Logic.Data;
+import Models.User;
+import Utils.Message;
+import java.util.List;
 
 /**
  *
@@ -135,16 +138,45 @@ public class RegisterScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        Data.addUser(emailTextField.getText(), passwordTextField.getText());
-        dispose();
-        new HomeScreen();
-        clearAllTextField();
+        if(isUsernameAndPasswordValid())
+        {
+            if(!isUsernameExist()){
+                Data.addUser(emailTextField.getText(), passwordTextField.getText());
+                dispose();
+                new HomeScreen();
+                clearAllTextField();
+            }
+            else{
+                Message.showErrorMessage("This username is already exist");
+            }
+            
+            
+        }
+        else{
+            Message.showErrorMessage("Please Enter valid email and password");
+        }
+       
     }//GEN-LAST:event_btnRegisterActionPerformed
-  private void clearAllTextField(){
+  private boolean isUsernameExist(){
+  List<User> users=Data.getUsers();
+  for(User user : users){
+      if(user.getUsername().equals(emailTextField.getText())){
+          return true;
+      }
+  }
+  return false;
+  
+  }
+    private void clearAllTextField(){
     emailTextField.setText("");
     passwordTextField.setText("");
     
     }
+  private boolean isUsernameAndPasswordValid(){
+      
+    return !emailTextField.getText().equals("") && !passwordTextField.getText().equals("");
+  
+  }
     /**
      * @param args the command line arguments
      */

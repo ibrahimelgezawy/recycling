@@ -8,6 +8,7 @@ package recycling;
 import Screens.HomeScreen;
 import Screens.LoginScreen;
 import Screens.RegisterScreen;
+import Screens.SaleGarbageScreen;
 
 /**
  *
@@ -15,8 +16,7 @@ import Screens.RegisterScreen;
  */
 public class Recycling {
     public static void main(String[] args) {
-        new LoginScreen();
-       
+        new SaleGarbageScreen();
     }
     
 }
