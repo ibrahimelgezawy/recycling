@@ -32,9 +32,9 @@ public class HomeScreen extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         btnSaleGarbage = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnBuyMaterial = new javax.swing.JButton();
         btnSignOut = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnHistory = new javax.swing.JButton();
         btnSubmit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -48,9 +48,14 @@ public class HomeScreen extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 51, 51));
-        jButton2.setForeground(new java.awt.Color(240, 240, 240));
-        jButton2.setText("Buy Material");
+        btnBuyMaterial.setBackground(new java.awt.Color(255, 51, 51));
+        btnBuyMaterial.setForeground(new java.awt.Color(240, 240, 240));
+        btnBuyMaterial.setText("Buy Material");
+        btnBuyMaterial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuyMaterialActionPerformed(evt);
+            }
+        });
 
         btnSignOut.setText("Sign Out");
         btnSignOut.addActionListener(new java.awt.event.ActionListener() {
@@ -59,9 +64,14 @@ public class HomeScreen extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(255, 51, 51));
-        jButton4.setForeground(new java.awt.Color(240, 240, 240));
-        jButton4.setText("History Of Interaction");
+        btnHistory.setBackground(new java.awt.Color(255, 51, 51));
+        btnHistory.setForeground(new java.awt.Color(240, 240, 240));
+        btnHistory.setText("History Of Interaction");
+        btnHistory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHistoryActionPerformed(evt);
+            }
+        });
 
         btnSubmit.setBackground(new java.awt.Color(255, 51, 51));
         btnSubmit.setForeground(new java.awt.Color(240, 240, 240));
@@ -79,9 +89,9 @@ public class HomeScreen extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(453, 453, 453)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBuyMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSaleGarbage, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(456, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -95,9 +105,9 @@ public class HomeScreen extends javax.swing.JFrame {
                 .addGap(79, 79, 79)
                 .addComponent(btnSaleGarbage, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(63, 63, 63)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnBuyMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(64, 64, 64)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(76, 76, 76)
                 .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
@@ -133,6 +143,16 @@ public class HomeScreen extends javax.swing.JFrame {
         dispose();
         new ComplaintScreen();
     }//GEN-LAST:event_btnSubmitActionPerformed
+
+    private void btnBuyMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuyMaterialActionPerformed
+        dispose();
+        new BuyMaterial();
+    }//GEN-LAST:event_btnBuyMaterialActionPerformed
+
+    private void btnHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistoryActionPerformed
+        dispose();
+        new HistoryOfInteraction();
+    }//GEN-LAST:event_btnHistoryActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,11 +190,11 @@ public class HomeScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBuyMaterial;
+    private javax.swing.JButton btnHistory;
     private javax.swing.JButton btnSaleGarbage;
     private javax.swing.JButton btnSignOut;
     private javax.swing.JButton btnSubmit;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
