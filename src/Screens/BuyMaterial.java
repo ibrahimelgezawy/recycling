@@ -19,7 +19,7 @@ public class BuyMaterial extends javax.swing.JFrame {
         this.setTitle("Buy Material");
         this.setVisible(true);
         this.setLocationRelativeTo(null);
-        //this.setSize(1000, 500);
+       
     }
 
     /**
@@ -165,7 +165,7 @@ public class BuyMaterial extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
                                 .addComponent(jSpinner7, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -283,10 +283,12 @@ public class BuyMaterial extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        dispose();
-        new HomeScreen();
+        disposeAndOpenHomeScreen();
     }//GEN-LAST:event_btnBackActionPerformed
-
+    private void disposeAndOpenHomeScreen(){
+    dispose();
+        new HomeScreen();
+    }
     /**
      * @param args the command line arguments
      */

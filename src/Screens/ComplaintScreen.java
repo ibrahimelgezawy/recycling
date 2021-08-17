@@ -104,10 +104,13 @@ public class ComplaintScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        dispose();
-        new HomeScreen();
+        disposeAndOpenHomeScreen();
     }//GEN-LAST:event_btnBackActionPerformed
-
+    private void disposeAndOpenHomeScreen(){
+    
+    dispose();
+        new HomeScreen();
+    }
     /**
      * @param args the command line arguments
      */

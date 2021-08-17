@@ -7,6 +7,7 @@ package Screens;
 
 import Logic.Data;
 import Models.User;
+import Utils.Message;
 import java.util.Iterator;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -142,11 +143,11 @@ public class LoginScreen extends javax.swing.JFrame {
             }
           
         }
-            
-        showErrorMessage("Your Email or password is not correct");
+            Message.showErrorMessage("Your Email or password is not correct");
         }
         else{
-                showErrorMessage("Please Enter a valid email and password");
+            Message.showErrorMessage("Please Enter a valid email and password");
+               
                 return ;
             }
        
@@ -159,10 +160,7 @@ public class LoginScreen extends javax.swing.JFrame {
     private boolean isUsenameAndPasswordValid(User user){
     return user.getPassword().equals(passwordTextField.getText()) && user.getUsername().equals(emailTextField.getText());
     }
-    private void showErrorMessage(String message){
-    
-    JOptionPane.showMessageDialog(null, message);
-    }
+   
     private void clearAllTextField(){
     emailTextField.setText("");
     passwordTextField.setText("");
